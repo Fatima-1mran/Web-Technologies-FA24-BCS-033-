@@ -1,29 +1,17 @@
-body {
-  font-family:
-    Times New Roman,
-    serif;
-  color: white;
+div {
+  border: solid white 1px;
+  padding: 20px;
+  margin: 10px;
 }
 
-.navbar {
-  background-color: black;
-  padding: 20px 40px;
-}
-
-.nav-links {
-  list-style: none;
+.nav_links {
+  background-color: rgb(46, 45, 45);
+  padding: 30px 40px;
   display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  gap: 65px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #999;
-  font-weight: 500;
-}
-
-.nav-links a.active {
-  color: #111;
+#footer {
+  margin-top: 200px;
 }
