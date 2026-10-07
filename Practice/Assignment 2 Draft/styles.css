@@ -87,3 +87,9 @@
   color: #fff;
   text-decoration: none;
 }
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
