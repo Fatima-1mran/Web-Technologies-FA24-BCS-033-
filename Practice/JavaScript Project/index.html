@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decision Maker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="menu-btn"
+      type="button"
+      aria-controls="sidebar"
+      aria-expanded="false"
+    >
+      Menu
+    </button>
+
+    <nav class="sidebar" id="sidebar" aria-label="Steps">
+      <h2>Menu</h2>
+      <a href="#step1">1. Category</a>
+      <a href="#step2">2. Options</a>
+      <a href="#step3">3. Pick</a>
+      <a href="#step4">4. Vibe</a>
+      <a href="#step5">5. Night Mode</a>
+    </nav>
+
+    <div class="container">
+      <header>
+        <h1>Decision Maker</h1>
+        <p class="subtitle">
+          The indecisiveness kicked in?? Let algorithm make the choices for you.
+        </p>
+      </header>
+
+      <main>
+        <section class="card" id="step1">
+          <h2>What Are We Choosing?</h2>
+          <p>Name your category</p>
+          <div class="input-group">
+            <input
+              type="text"
+              id="categoryInput"
+              placeholder="e.g. Dinner Spots"
+            />
+          </div>
+          <p>
+            Current Vibe: <strong id="categoryPreview">Unset Category</strong>
+          </p>
+        </section>
+
+        <section class="card" id="step2">
+          <h2>Add Your Options</h2>
+          <p>Type an item and click Add (or hit Enter):</p>
+          <div class="input-group">
+            <input
+              type="text"
+              id="itemInput"
+              placeholder="Enter an option..."
+            />
+            <button id="addItemBtn" type="button">Add Item</button>
+          </div>
+
+          <div class="list-container">
+            <h3>Options for <span id="listCategoryName">Your List</span>:</h3>
+            <ul id="itemList">
+              <li class="empty-msg">No items added yet!</li>
+            </ul>
+            <p class="counter">Total options: <span id="itemCount">0</span></p>
+          </div>
+        </section>
+
+        <section class="card highlight-card" id="step3">
+          <h2>Let Fate Decide</h2>
+          <button class="btn-giant" id="pickItemBtn" type="button">
+            PICK FOR ME
+          </button>
+
+          <div class="result-box">
+            <p class="result-label">The Winner Is:</p>
+            <h2 id="winnerResult">???</h2>
+          </div>
+        </section>
+
+        <section class="card" id="step4">
+          <h2>Customize Your Vibe</h2>
+          <p>Choose an accent color to match your aesthetic:</p>
+          <select id="themeSelect">
+            <option value="#8a2be2">Electric Violet</option>
+            <option value="#ff1493">Neon Pink</option>
+            <option value="#00f5d4">Cyber Mint</option>
+            <option value="#ff7b00">Sunset Orange</option>
+          </select>
+        </section>
+
+        <section class="card" id="step5">
+          <h2>Night Mode</h2>
+          <p>Toggle the dark mode aesthetic.</p>
+          <button id="darkModeBtn" type="button">Turn On Dark Mode</button>
+        </section>
+      </main>
+
+      <footer>
+        <p>Built with HTML, CSS, and plain JavaScript</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
