@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.item {
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item h2 {
+  font-size: 18px;
+}
