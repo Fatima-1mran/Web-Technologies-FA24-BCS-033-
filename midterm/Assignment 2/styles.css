@@ -1309,3 +1309,117 @@ body {
     padding: 16px 12px 32px 12px;
   }
 }
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background-color: hsl(231, 70%, 45%);
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+}
+
+.cart-wrap {
+  display: flex;
+}
+
+.mini-cart {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 32px;
+  width: 300px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2000;
+}
+
+.mini-cart.open {
+  display: block;
+}
+
+.mini-cart h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1f1f24;
+  margin-bottom: 12px;
+}
+
+.mini-list {
+  list-style: none;
+  padding: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.mini-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.mini-empty {
+  color: #666;
+}
+
+.remove-btn {
+  background-color: transparent;
+  border: 1px solid black;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+.remove-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.mini-total {
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.mini-checkout {
+  display: block;
+  text-align: center;
+  background-color: hsl(231, 70%, 45%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-btn:disabled:hover {
+  background-color: transparent;
+  color: black;
+}
+
+@media (max-width: 632px) {
+  .mini-cart {
+    right: 56px;
+    width: 280px;
+  }
+}
