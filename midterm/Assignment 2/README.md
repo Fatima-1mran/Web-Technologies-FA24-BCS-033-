@@ -1,20 +1,29 @@
-# Assignment 2 - Ray-Ban clone
+# Midterm Lab - CSC336 Web Technologies
 
-Reference site: Ray-Ban Global
-URL: https://www.ray-ban.com/global
-Screenshot: ![homepage](image.png)
+Name: Fatima Khan
+Roll number: FA24-BCS-033
+N = 33, BP = 633px, H = 231 (accent hsl(231, 70%, 45%)), K = 3
 
-Pages
+## Files changed
 
-- index.html - landing page (hero, women/men/kids, sliding new arrivals row, footer)
-- sunglasses.html - all sunglasses page (filter bar + big product boxes)
-- product.html - product page for RB2236
+- midterm.css (new): all new CSS, styles.css untouched
+- index.html, sunglasses.html, product.html: navbar item, midterm.css link, cart icon link
+- checkout.html (new): checkout form
+- script.js (new): cart badge and mini cart (linked from index.html and sunglasses.html)
+- README.md
 
-Notes
+## Task 1 - Mega-menu
 
-- Bootstrap 5 (CDN) is used for the navbar (navbar, collapse) and the two columns on the product page (row, col-md-6)
-- Everything else is my own flexbox and media queries in styles.css
-- The new arrivals row slides with the arrow button (pure CSS, no JavaScript)
-- Hover over a menu tab to see the dropdown (desktop only)
-- Hover over RB2236 and CATS 5000 CLASSIC to see the second picture
-- Add to Cart buttons do not work yet
+Added "Shop by Category" to the navbar with 3 columns (K = 3) of 4 links, each under a heading. It opens on hover and on keyboard focus (:focus-within), and floats over the page without pushing it down. Below 633px the same groups are <details>/<summary> accordions in the hamburger menu.
+
+## Task 2 - Checkout form
+
+checkout.html has Contact and Delivery fieldsets with labels joined by for/id. Phone uses pattern, the date uses min/max (29 Oct to 1 Dec 2026), and :user-invalid shows red borders and messages only after interaction. CSS Grid puts the fieldsets side by side from 633px; the cart icon now links to this page.
+
+## Task 3 - Cart
+
+script.js reads name and price from the card, stores them in an array and shows the count in a badge. The cart icon toggles a mini cart with Remove buttons and a reduce() total. Each product can be added 3 times, then its button shows "Limit reached" until one is removed.
+
+## AI tools used
+
+Claude (Anthropic)
