@@ -1099,7 +1099,6 @@ body {
     padding: 24px 4px 0 4px;
   }
 }
-
 .menu-column ul,
 .category-accordion ul {
   list-style: none;
@@ -1193,5 +1192,120 @@ body {
     display: block;
     font-size: 14px;
     padding: 6px 0;
+  }
+}
+
+.checkout-page {
+  padding: 24px 56px 56px 56px;
+}
+
+.checkout-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.checkout-form fieldset {
+  border: 1px solid #ccc;
+  padding: 8px 20px 8px 20px;
+  min-width: 0;
+}
+
+.checkout-form legend {
+  float: none;
+  width: auto;
+  padding: 0 8px;
+  margin-bottom: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1f1f24;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin: 12px 0 16px 0;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  font-size: 14px;
+  background-color: white;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid hsl(231, 70%, 45%);
+  outline-offset: 0;
+}
+
+.error-msg {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.field input:user-invalid,
+.field select:user-invalid {
+  border-color: red;
+}
+
+.field input:user-invalid ~ .error-msg,
+.field select:user-invalid ~ .error-msg {
+  display: block;
+}
+
+.checkout-btn {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 16px;
+  background-color: hsl(231, 70%, 45%);
+  color: white;
+  border: 1px solid hsl(231, 70%, 45%);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.checkout-btn:hover {
+  background-color: white;
+  color: hsl(231, 70%, 45%);
+}
+
+@media (min-width: 633px) {
+  .checkout-form {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .field {
+    grid-template-columns: 110px 1fr;
+    column-gap: 12px;
+  }
+
+  .field label {
+    margin-bottom: 0;
+  }
+
+  .error-msg {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 632px) {
+  .checkout-page {
+    padding: 16px 12px 32px 12px;
   }
 }
